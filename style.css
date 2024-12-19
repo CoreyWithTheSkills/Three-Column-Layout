@@ -1,0 +1,204 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Kanit:wght@400;700&family=Lexend+Deca:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono&display=swap');
+
+body{
+    background-color: rgb(38, 35, 35);
+}
+
+h1{
+    font-family: "Big Shoulders Display";
+    color: white;
+    font-size: 4rem;
+}
+
+p{
+    font-family: "Lexend Deca";
+    color: white;
+    font-size: 1.5rem;
+}
+
+.grid-flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 60%;
+    width: 75%;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#grid-item-1{
+    background-color: hsl(31, 77%, 52%);
+    padding: 5rem;
+}
+
+#grid-item-2{
+    background-color: hsl(184, 100%, 22%);
+    padding: 5rem;
+}
+
+#grid-item-3{
+    background-color: hsl(179, 100%, 13%);
+    padding: 5rem;
+}
+
+button{
+    font-size: 1.5rem;
+    font-family: "Lexend Deca";
+    height: 3rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.btn1{
+    color: hsl(31, 77%, 52%);
+}
+
+.btn2{
+    color: hsl(184, 100%, 22%);
+}
+
+
+.btn3{
+    color: hsl(179, 100%, 13%);
+}
+
+p{
+    font-weight: 300;
+    margin-bottom: 7.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .grid-flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        padding: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .grid-item {
+        background-color: #f0f0f0;
+        padding: 2rem;
+        text-align: left;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-width: 100%;
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+    }
+
+    button{
+        font-size: 1rem;
+        font-family: "Lexend Deca";
+        height: 3rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+
+    #grid-item-1{
+        background-color: hsl(31, 77%, 52%);
+        padding: 3rem;
+    }
+    
+    #grid-item-2{
+        background-color: hsl(184, 100%, 22%);
+        padding: 3rem;
+    }
+    
+    #grid-item-3{
+        background-color: hsl(179, 100%, 13%);
+        padding: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .grid-container{
+        height: 75%;
+    }
+    
+}
+
+
+/* Media query for small desktops (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grid-flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Adjust as needed for the specific layout */
+        padding: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Two columns layout */
+    }
+
+    .grid-item {
+        padding: 1.5rem; /* Adjust the padding for a better fit */
+        text-align: left;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .grid-flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Adjust as needed for the specific layout */
+        padding: 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns layout */
+
+    }
+
+    .grid-item {
+        padding: 2rem; /* Adjust the padding for a better fit */
+        text-align: left;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    @media (max-width: 1199px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Two columns layout for smaller screens */
+        }
+    }
+}
