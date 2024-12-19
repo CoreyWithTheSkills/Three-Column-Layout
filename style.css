@@ -93,13 +93,17 @@ p{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Full viewport height */
+        height: auto; /* Adjust to take full height when needed */
         padding: 10px;
+        min-height: 100vh; /* Ensure minimum height so there is space below */
+        flex-direction: column;
+        overflow-y: auto; /* Allow scrolling when content overflows */
     }
 
     .grid-container {
         grid-template-columns: 1fr;
         padding: 1rem;
+        margin-bottom: 5rem;
     }
 
     .grid-item {
@@ -111,16 +115,17 @@ p{
         max-width: 100%;
     }
 
-    h1{
+    h1 {
         font-size: 2.2rem;
     }
-    p{
+
+    p {
         font-size: 1.2rem;
         font-weight: 300;
         margin-bottom: 3rem;
     }
 
-    button{
+    button {
         font-size: 1rem;
         font-family: "Lexend Deca";
         height: 3rem;
@@ -130,27 +135,28 @@ p{
         cursor: pointer;
     }
 
-    #grid-item-1{
+    #grid-item-1 {
         background-color: hsl(31, 77%, 52%);
         padding: 3rem;
     }
-    
-    #grid-item-2{
+
+    #grid-item-2 {
         background-color: hsl(184, 100%, 22%);
         padding: 3rem;
     }
-    
-    #grid-item-3{
+
+    #grid-item-3 {
         background-color: hsl(179, 100%, 13%);
         padding: 3rem;
         margin-bottom: 2rem;
     }
-    
-    .grid-container{
-        height: 75%;
+
+    .grid-container {
+        height: auto; /* Adjust height to allow room for spacing */
+        min-height: 100%; /* Ensures it takes up full viewport height */
     }
-    
 }
+
 
 
 /* @media (min-width: 768px) and (max-width: 1024px) {
